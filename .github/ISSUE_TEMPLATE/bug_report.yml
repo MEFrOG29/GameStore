@@ -1,0 +1,68 @@
+name: "Отчет о дефектах"
+description: "Шаблон отчета о дефектах"
+title: "[Ошибка]:" 
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description_of_report
+    attributes:
+      label: "Описание ошибки"
+      placeholder: "Суть ошибки в том что..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps_playback
+    attributes:
+      label: "Шаги воспроизведения ошибки"
+      placeholder: "что нужно сделать, чтобы вопспроизвести ошибку"
+    validations:
+      required: true
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: "Ожидаемый результат"
+      placeholder: "что по логике должно произойти"
+    validations:
+      required: true
+  - type: textarea
+    id: real_result
+    attributes:
+      label: "Фактический результат"
+      placeholder: "что происходит на самом деле"
+    validations:
+      required: true
+  - type: dropdown
+    id: OS
+    attributes:
+      label: "Операционные системы"
+      options:
+        - Windows 11
+        - Windows 10
+        - Ubuntu
+        - macOS
+        - Android 15
+        - iOS 26
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Приоритет"
+      options:
+        - Высокий
+        - Средний
+        - Низкий
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Серьёзность"
+      options:
+        - Высокая
+        - Средняя
+        - Низкая
+        - Критическая
+    validations:
+      required: true
